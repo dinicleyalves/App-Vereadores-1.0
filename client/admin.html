@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin - Sorteio de Vereadores</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Painel Administrativo</h1>
+
+    <!-- Seção de Login -->
+    <section id="loginSection">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Usuário">
+      <input type="password" id="password" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+    </section>
+
+    <!-- Painel Administrativo -->
+    <section id="admin-panel" style="display:none;">
+      <div id="adminHeader">
+        <h2>📋 Gerenciar Vereadores</h2>
+        <button id="logoutBtn" onclick="logout()">🚪 Sair</button>
+      </div>
+
+      <div id="oradorAtual" class="orador-atual">🎤 Nenhum vereador está com a palavra.</div>
+
+      <h3>Cadastrar Novo Vereador</h3>
+      <input type="text" id="nome" placeholder="Nome do Vereador">
+      <input type="text" id="partido" placeholder="Partido">
+      <input type="file" id="foto">
+      <button onclick="addVereador()">Adicionar Vereador</button>
+
+      <h3>Lista de Vereadores</h3>
+      <ul class="lista-vereadores" id="listaVereadores"></ul>
+
+      <button id="btnSorteio" onclick="realizarSorteio()">🎲 Realizar Sorteio</button>
+    </section>
+  </div>
+
+  <div id="popupMsg"></div>
+
+
+  <script src="js/admin.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+</body>
+</html>

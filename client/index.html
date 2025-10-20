@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorteio da Tribuna - Câmara Municipal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎤 Sorteio da Tribuna</h1>
+
+    <p id="status">Aguardando sorteio...</p>
+
+    <button id="btnAtualizar" onclick="carregarUltimoSorteio()">🔄 Atualizar Agora</button>
+
+    <div id="ordemSorteio"></div>
+  </div>
+
+  <script src="js/live.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+</body>
+</html>
